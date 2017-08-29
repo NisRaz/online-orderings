@@ -21,6 +21,34 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li id="login"><a href="${contextRoot}/login" class="fa fa-sign-in fa-lg navbar-brand" aria-hidden="true"><span style="color:pink;">LogIn</span></a></li>
 					<li id="register"><a href="${contextRoot}/register" class="fa fa-user-plus fa-lg navbar-brand" aria-hidden="true"><span style="color:#00FF00;">Register</span></a></li>
+				    <li class="dropdown" id="userCart">
+				    <a href="javascript:void(0)"
+                    		class="btn btn-default dropdown-toggle"
+                    		id="dropdownMenu1" 
+                    		data-toggle="dropdown">
+                    			
+                    			${userModel.fullName}
+                    			<span class="caret"></span>
+                    		
+                    	</a>
+                    	<ul class="dropdown-menu">
+                    	<li>
+	                    			<a href="${contextRoot}/cart/show" >
+	                    			 <span class="glyphicon glyphicon-shopping-cart"></span>
+	                    				<span class="badge">${userModel.cart.cartLines}</span>
+	                    				- Rs:; ${userModel.cart.grandTotal}
+	                    			
+	                    			</a>
+	                    			<li class="divider" role="separator"></li>
+	                    			
+	                    	<li>
+                    			<a href="${contextRoot}/perform-logout">Logout</a>
+                    		</li>
+	                    			
+	                    </li>
+                    	</ul>
+                    	
+                    	</li>
 				</ul>
 			</div>
 		</div>
